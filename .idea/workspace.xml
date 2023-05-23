@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="53f6180c-a021-4c59-8fa5-838b4a0400bc" name="Changes" comment="" />
+    <list default="true" id="53f6180c-a021-4c59-8fa5-838b4a0400bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital-management-system/src/main/java/com/hospital/hospitalmanagementsystem/Exception/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital-management-system/src/main/java/com/hospital/hospitalmanagementsystem/Exception/DoctorNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hospital-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hospital-management-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/java/com/assignment/Assignment/AssignmentApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/java/com/assignment/Assignment/entity/Appointment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/java/com/assignment/Assignment/entity/Doctor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/java/com/assignment/Assignment/entity/Patient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/java/com/assignment/Assignment/entity/Prescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment/src/test/java/com/assignment/Assignment/AssignmentApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +38,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2Pz4wsAbauwthg1s0VWZ7QzzMFG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/laith/Desktop/hospital-management-system/Assignment"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/laith/Desktop/hospital-management-system",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2551724",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

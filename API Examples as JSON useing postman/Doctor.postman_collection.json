@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "df112759-a5a9-4345-8911-e04ef3ae6fe9",
+		"name": "Doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19385800"
+	},
+	"item": [
+		{
+			"name": "get Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/doctors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Doctors",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/doctors",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:30:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"ahmad\",\n        \"speciality\": \"brain\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ismail\",\r\n    \"speciality\": \"bones\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/doctors?name=ahmad&speciality=brain",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ahmad"
+						},
+						{
+							"key": "speciality",
+							"value": "brain"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create doctor",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ismail\",\r\n    \"speciality\": \"bones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/doctors?name=ahmad&speciality=brain",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ahmad"
+								},
+								{
+									"key": "speciality",
+									"value": "brain"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:31:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"ismail\",\n    \"speciality\": \"bones\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get doctor by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/doctors/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get doctor by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/doctors/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:32:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"ahmad\",\n    \"speciality\": \"brain\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete doctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/doctors/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete doctor",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/doctors/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:34:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "update doctor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ismail\",\r\n    \"speciality\": \"eye\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/doctors/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update doctor",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ismail\",\r\n    \"speciality\": \"eye\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/doctors/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:35:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"ismail\",\n    \"speciality\": \"eye\"\n}"
+				}
+			]
+		},
+		{
+			"name": "appointments for doctor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/doctors/1/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors",
+						"1",
+						"appointments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "appointments for doctor",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/doctors/1/appointments",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctors",
+								"1",
+								"appointments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 16:18:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"date\": \"2023-07-07T00:00:00.000+00:00\",\n        \"doctor\": {\n            \"id\": 1,\n            \"name\": \"ahmad\",\n            \"speciality\": \"brain\",\n            \"appointments\": []\n        },\n        \"patient\": {\n            \"id\": 1,\n            \"name\": \"laith\",\n            \"phoneNum\": 12345,\n            \"appointments\": []\n        },\n        \"prescriptions\": []\n    },\n    {\n        \"id\": 2,\n        \"date\": \"2023-09-04T00:00:00.000+00:00\",\n        \"doctor\": {\n            \"id\": 1,\n            \"name\": \"ahmad\",\n            \"speciality\": \"brain\",\n            \"appointments\": []\n        },\n        \"patient\": {\n            \"id\": 2,\n            \"name\": \"omar\",\n            \"phoneNum\": 5431,\n            \"appointments\": []\n        },\n        \"prescriptions\": []\n    }\n]"
+				}
+			]
+		}
+	]
+}
