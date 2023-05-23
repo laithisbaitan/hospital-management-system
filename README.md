@@ -1,31 +1,67 @@
 # hospital-management-system
-- [Introduction](#introduction)
+## Introduction
 This is a small hospital management API system, that manages doctors with their patients through appointments, 
 and assign a prescription if needed
 
 ## Table of Contents
-
+- [Introduction](#introduction)
 - [UML](#UML)
+- [APIs](#APIs)
+- - [Doctor](#Doctor)
+- - [Patient](#Patient)
+- - [Appointment](#Appointment)
+- - [Prescription](#Prescription)
+
+
+## UML
 The following png is UML Class Diagram of a small hospital system,
 with a docter and patient classes that are connected through an appointment class,
 and a prescreption class linked to to that appointment, with the ability to 
 schedual another appointment if needed by the prescreption.
 ![alt text](./HMS-UML.png)
 
-- [APIs](#APIs)
-- [Doctor](#Doctor)
+## APIs
 As for how to use the API, the following are tables that describes the different http requests
 
-| Http <br/>Method | URL Path                   | Http <br/>Status <br/>Code | Description                     | Sample Request                                                      | Sample Response                                                                                                                                                                                               |
-|:-----------------|:---------------------------|:---------------------------|:--------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET              | /doctors                   | 200 /<br/>404              | Get all <br/>doctors            | GET /doctors                                                        | json {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                  |
-| POST             | /doctors                   | 201 /<br/>400              | Create a doctor                 | POST /doctors<br/>{<br/>"name":"john",<br/>"speciality":"eye"<br/>} | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                       |
-| GET              | /doctors/{id}              | 200 /<br/>404              | Get Doctor by id                | GET /doctors/1                                                      | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                       |
-| DELETE           | /doctors/{id}              | 200 /<br/>404              | Delete doctor by id             | DELETE /doctors/1                                                   | Deleted successfully                                                                                                                                                                                          |
-| GET              | /doctors/{id}/appointments | 200 /<br/>404              | Get all appointments for doctor | GET /doctors/{id}/appointments                                      | [<br/>{<br/>"id":1,<br/>"date":"2023-07-07",<br/>"doctor":{<br/>"id":1,<br/>"name":"john",<br/>"speciality":"eye"<br/>},<br/>"patient":{<br/>"id":1,<br/>"name":"omar",<br/>"phonenum":1234<br/>}<br/>}<br/>] |
-| PUT              | /doctors/{id}              | 200 /<br/>404              | Update doctor                   | PUT /doctors/{id}<br/>{<br/>"name":"john",<br/>"speciality"<br/>}   | {<br/>"id":1,<br/>"name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                      |
+## Doctor
+| Http <br/>Method | URL Path                   | Http <br/>Status <br/>Code | Description                     | Sample Request                                                        | Sample Response                                                                                                                                                                                                   |
+|:-----------------|:---------------------------|:---------------------------|:--------------------------------|:----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET              | /doctors                   | 200 /<br/>404              | Get all <br/>doctors            | GET /doctors                                                          | json {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                      |
+| POST             | /doctors                   | 201 /<br/>400              | Create a doctor                 | POST /doctors<br/>{<br/>"name":"john",<br/>"speciality":"eye"<br/>}   | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                           |
+| GET              | /doctors/{id}              | 200 /<br/>404              | Get Doctor by id                | GET /doctors/1                                                        | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                           |
+| DELETE           | /doctors/{id}              | 200 /<br/>404              | Delete doctor by id             | DELETE /doctors/1                                                     | Deleted successfully                                                                                                                                                                                              |
+| GET              | /doctors/{id}/appointments | 200 /<br/>404              | Get all appointments for doctor | GET /doctors/{id}/appointments                                        | [<br/>{<br/>"id":1,<br/>"date":"2023-07-07",<br/>"doctor":{<br/>"id":1,<br/>"name":"john",<br/>"speciality":"eye"<br/>},<br/>"patient":{<br/>"id":1,<br/>"name":"omar",<br/>"phonenum":1234<br/>}<br/>}<br/>]     |
+| PUT              | /doctors/{id}              | 200 /<br/>404              | Update doctor                   | PUT /doctors/{id}<br/>{<br/>"name":"john",<br/>"speciality":eye<br/>} | {<br/>"id":1,<br/>"name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                     |
 
 
+## Patient
+| Http <br/>Method | URL Path      | Http <br/>Status <br/>Code | Description           | Sample Request                                                       | Sample Response                                             |
+|:-----------------|:--------------|:---------------------------|:----------------------|:---------------------------------------------------------------------|:------------------------------------------------------------|
+| GET              | /patient      | 200 /<br/>404              | Get all <br/>Patients | GET /Patients                                                        | json {"id":1,<br/>name":"john",<br/>"phoneNum":"1234"<br/>} |
+| POST             | /patient      | 201 /<br/>400              | Create a Patient      | POST /Patients<br/>{<br/>"name":"john",<br/>"phoneNum":"123"<br/>}   | {"id":1,<br/>name":"john",<br/>"phoneNum":"123"<br/>}       |
+| GET              | /patient/{id} | 200 /<br/>404              | Get Patient by id     | GET /Patients/1                                                      | {"id":1,<br/>name":"john",<br/>"phoneNum":"123"<br/>}       |
+| DELETE           | /patient/{id} | 200 /<br/>404              | Delete Patient by id  | DELETE /Patients/1                                                   | Deleted successfully                                        |
+| PUT              | /patient/{id} | 200 /<br/>404              | Update Patient        | PUT /Patients/{id}<br/>{<br/>"name":"john",<br/>"phoneNum":123<br/>} | {<br/>"id":1,<br/>"name":"john",<br/>"phoneNum":"123"<br/>} |
+
+
+## Appointment
+| Http <br/>Method | URL Path          | Http <br/>Status <br/>Code | Description               | Sample Request                                                                              | Sample Response                                                                  |
+|:-----------------|:------------------|:---------------------------|:--------------------------|:--------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| GET              | /Appointment      | 200 /<br/>404              | Get all <br/>Appointments | GET /Appointments                                                                           | json {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                     |
+| POST             | /Appointment      | 201 /<br/>400              | Create a Appointment      | POST /Appointments<br/>{<br/>"date":"2023-01-03",<br/>"doctorId":1,<br/>"patientId":2<br/>} | {<br/>"id":1,<br/>"date":"2023-01-03",<br/>"doctorId":1,<br/>"patientId":2<br/>} |
+| GET              | /Appointment/{id} | 200 /<br/>404              | Get Appointment by id     | GET /Appointments/1                                                                         | {<br/>"id":1,<br/>"date":"2023-01-03",<br/>"doctorId":1,<br/>"patientId":2<br/>} |
+| DELETE           | /Appointment/{id} | 200 /<br/>404              | Delete Appointment by id  | DELETE /Appointments/1                                                                      | Deleted successfully                                                             |
+| PUT              | /Appointment/{id} | 200 /<br/>404              | Update Appointment        | PUT /Appointments/{id}{<br/>"date":"2023-01-03",<br/>"doctorId":2,<br/>"patientId":3<br/>}  | {<br/>"id":1,<br/>"date":"2023-01-03",<br/>"doctorId":2,<br/>"patientId":3<br/>} |
+
+
+## Prescription
+| Http <br/>Method | URL Path           | Http <br/>Status <br/>Code | Description                | Sample Request                                                           | Sample Response                                                                                                                                                                                                   |
+|:-----------------|:-------------------|:---------------------------|:---------------------------|:-------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET              | /Prescription      | 200 /<br/>404              | Get all <br/>Prescriptions | GET /Prescription                                                        | json {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                      |
+| POST             | /Prescription      | 201 /<br/>400              | Create a Prescription      | POST /Prescription<br/>{<br/>"name":"john",<br/>"speciality":"eye"<br/>} | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                           |
+| GET              | /Prescription/{id} | 200 /<br/>404              | Get Prescription by id     | GET /Prescription/1                                                      | {"id":1,<br/>name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                           |
+| DELETE           | /Prescription/{id} | 200 /<br/>404              | Delete Prescription by id  | DELETE /Prescription/1                                                   | Deleted successfully                                                                                                                                                                                              |
+| PUT              | /Prescription/{id} | 200 /<br/>404              | Update Prescription        | PUT /Prescription/{id}<br/>{<br/>"name":"john",<br/>"speciality"<br/>}   | {<br/>"id":1,<br/>"name":"john",<br/>"speciality":"eye"<br/>}                                                                                                                                                     |
 
 
 ,you can also checkout the folder containing the full json api
