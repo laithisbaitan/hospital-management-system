@@ -1,10 +1,10 @@
-package com.assignment.Assignment;
+package com.hospital.hospitalmanagementsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AssignmentApplicationTests {
+class HospitalManagementSystemApplicationTests {
 
 	@Test
 	void contextLoads() {
